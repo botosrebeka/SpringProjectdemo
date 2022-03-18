@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
-
 <head>
     <meta charset="UTF-8">
-    <title>Players</title>
+    <title>Add Player</title>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
@@ -38,45 +35,48 @@
     </div>
 </nav>
 
-<br/>
+<form style="margin: 25px 50px 75px;">
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >First name</label>
+        <input type="email" class="form-control" >
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Last name</label>
+        <input type="email" class="form-control" >
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Age</label>
+        <input type="email" class="form-control" >
+    </div>
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Salary</label>
+        <input type="email" class="form-control" >
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label for="exampleFormControlSelect2">Position</label>
+        <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>Goalkeeper</option>
+            <option>Right Fullback</option>
+            <option>Left Fullback</option>
+            <option>Center Back</option>
+            <option>Defending/Holding Midfielder</option>
+            <option>Right Midfielder/Winger</option>
+            <option>Central/Box-to-Box Midfielder</option>
+        </select>
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Place of birth</label>
+        <input type="email" class="form-control" >
+    </div>
 
 
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th scope="col">First name</th>
-        <th scope="col">Last name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Salary</th>
-        <th scope="col">Position</th>
-        <th scope="col">Place of birth</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tbody>
-    <tr th:each="player : ${playerList}">
-        <td th:text="${player.firstName}" ></td>
-        <td th:text="${player.lastName}" ></td>
-        <td th:text="${player.getAge()}" ></td>
-        <td th:text="${player.getSalary()}" ></td>
-        <td th:text="${player.position}" ></td>
-        <td th:text="${player.place_of_birth}" ></td>
-    </tr>
-    </tbody>
-</table>
-
-<br/>
-
-    <button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-        <a  style = "color : white; text-decoration: none;" href="/indexAddPlayer">Add Player</a>
-    </button>
-    <button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-        <a  style = "color : white; text-decoration: none;" href="#">Remove Player</a>
-    </button>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
 
 </body>
-
-
-
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 </html>

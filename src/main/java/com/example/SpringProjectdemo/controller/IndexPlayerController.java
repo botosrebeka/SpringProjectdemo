@@ -23,4 +23,9 @@ public class IndexPlayerController {
 
         return "indexPlayer";
     }
+
+    @GetMapping(value = "/indexAddPlayer")
+    public String getIndex(){
+        return "indexAddPlayer";
+    }
 }
