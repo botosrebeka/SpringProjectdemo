@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+<head>
+    <meta charset="UTF-8">
+    <title>Players</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/indexHome">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/indexPlayer">Players</a></li>
+                        <li><a class="dropdown-item" href="/indexClub">Clubs</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<br/>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Position</th>
+        <th scope="col">Place of birth</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tbody>
+    <tr th:each="player : ${playerList}">
+        <td th:text="${player.firstName}" ></td>
+        <td th:text="${player.lastName}" ></td>
+        <td th:text="${player.getAge()}" ></td>
+        <td th:text="${player.getSalary()}" ></td>
+        <td th:text="${player.position}" ></td>
+        <td th:text="${player.place_of_birth}" ></td>
+    </tr>
+    </tbody>
+</table>
+
+<br/>
+
+</body>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</html>
