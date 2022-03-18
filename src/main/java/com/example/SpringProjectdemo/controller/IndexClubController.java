@@ -24,5 +24,10 @@ public class IndexClubController {
         return "indexClub";
     }
 
+    @GetMapping(value = "/indexAddClub")
+    public String getIndex(){
+        return "indexAddClub";
+    }
+
 
 }

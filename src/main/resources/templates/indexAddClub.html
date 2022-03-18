@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
 <head>
     <meta charset="UTF-8">
-    <title>Club</title>
+    <title>Add Club</title>
 </head>
 <body>
 
@@ -35,40 +35,39 @@
         </div>
     </div>
 </nav>
-<div style="margin: 25px 50px 75px 50px">
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Short name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Owner</th>
-        <th scope="col">Chairman</th>
-        <th scope="col">Coach</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tbody>
-    <tr th:each="club : ${clubList}">
-        <td th:text="${club.name}" ></td>
-        <td th:text="${club.short_name}" ></td>
-        <td th:text="${club.location}" ></td>
-        <td th:text="${club.owner}" ></td>
-        <td th:text="${club.chairman}" ></td>
-        <td th:text="${club.coach}" ></td>
-    </tr>
-    </tbody>
-</table>
-</div>
-<br/>
-<div >
-<button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-    <a  style = "color : white; text-decoration: none;" href="/indexAddClub">Add Club</a>
-</button>
-<button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-    <a  style = "color : white; text-decoration: none;" href="#">Remove Club</a>
-</button>
-</div>
+
+<form style="margin: 25px 50px 5px;">
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Full name</label>
+        <input class="form-control"  >
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Short name</label>
+        <input class="form-control">
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Location</label>
+        <input class="form-control">
+    </div>
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Owner</label>
+        <input class="form-control" >
+    </div>
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Chairman</label>
+        <input class="form-control" >
+    </div>
+    <div style="margin: 5px 5px 5px;" class="form-group">
+        <label >Coach</label>
+        <input class="form-control" >
+    </div>
+
+</form>
+
+<button style="margin: 5px 55px 75px;" type="submit" class="btn btn-primary">Add</button>
+
 </body>
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 </html>
