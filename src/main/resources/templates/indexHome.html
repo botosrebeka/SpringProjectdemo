@@ -2,11 +2,20 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <link rel="stylesheet" type="text/css" th:href="@{/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <head>
     <meta charset="UTF-8">
+
+    <style>
+        body {background: rgba(0, 128, 0, 0.2)}
+
+    </style>
+
     <title>Home</title>
 </head>
+
+<body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Football</a>
@@ -18,51 +27,221 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/indexHome">Home</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Players
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/indexPlayer">Players</a></li>
-                        <li><a class="dropdown-item" href="/indexAddPlayer">Add</a></li>
-                    </ul>
+                <li>
+                    <a class="nav-link active" href="/indexPlayer">Players</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Clubs
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/indexClub">Clubs</a></li>
-                        <li><a class="dropdown-item" href="/indexAddClub">Add</a></li>
-                    </ul>
+                <li>
+                    <a class="nav-link active" href="/indexClub">Clubs</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
         </div>
     </div>
 </nav>
-<body>
+
+
 </br>
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <img style ="margin-left: auto; margin-right: auto;" src="https://i.ibb.co/GvpcK5S/istockphoto-1312143573-170667a.jpg" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="col-8">
-            <H1>Home Page</H1>
-            </br>
 
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id justo feugiat, fermentum tortor eget, convallis est. Mauris sagittis nulla ut mi consectetur dignissim. Morbi sed sapien vel libero porta maximus et a tellus. Mauris rutrum euismod orci at egestas. Nunc dictum, mi a ullamcorper dictum, tortor tellus rhoncus neque, in semper tortor massa non ante. Suspendisse non justo augue. In ut risus facilisis, sagittis mauris ac, facilisis massa. Donec porta eu orci sed faucibus. Vestibulum cursus massa a elit rutrum malesuada a eu nibh. Fusce semper, ipsum vitae faucibus finibus, nunc lacus fermentum lectus, a semper velit ligula in risus. Duis tristique, ligula volutpat imperdiet porttitor, mauris orci rhoncus ante, in convallis ipsum enim nec justo. Nulla aliquam erat in tellus porta lobortis. Integer id nisl id risus lacinia finibus. </p>
-
-            <p class="text-center">  Nulla sit amet velit lacinia, mattis elit tincidunt, tristique tortor. Suspendisse potenti. Cras condimentum nisi ut nunc vestibulum, in efficitur tellus fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In lacinia turpis nec nulla pulvinar, in malesuada nisl luctus. Maecenas ac quam ornare, vulputate justo quis, dapibus lacus. Donec ornare rutrum risus, sit amet gravida quam pretium quis. Vivamus molestie ac turpis ut vestibulum. Sed lacus est, volutpat a ante eget, interdum viverra mauris. Nullam pretium tellus ac metus convallis, in mollis dolor ultrices. Morbi vel commodo quam. Curabitur ut ante ut purus bibendum lacinia. Pellentesque iaculis justo nec turpis sodales, vel elementum tellus varius. Maecenas consequat, neque ut tempus lobortis, diam dui sodales odio, nec mollis lectus ante non enim. In condimentum vulputate risus, quis condimentum elit accumsan faucibus. Duis ullamcorper vel orci in blandit.</p>
-        </div>
+<div style="margin: 20px 50px 20px" class="row">
+    <div style="margin-top: 50px " class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+        <img
+                src="https://i.ibb.co/GvpcK5S/istockphoto-1312143573-170667a.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1631495634750-0f14320bc0a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+        />
+        <img
+                src="https://i.ibb.co/GvpcK5S/istockphoto-1312143573-170667a.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1631495634750-0f14320bc0a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Wintry Mountain Landscape"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1624280157150-4d1ed8632989?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
     </div>
-    <div class="row">
+
+    <div class="col-lg-4 mb-4 mb-lg-0">
+        <H1>Home Page</H1>
+        </br>
+
+        <p style="margin-bottom: 50px" class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id justo feugiat, fermentum tortor eget, convallis est. Mauris sagittis nulla ut mi consectetur dignissim. Morbi sed sapien vel libero porta maximus et a tellus. Mauris rutrum euismod orci at egestas. Nunc dictum, mi a ullamcorper dictum, tortor tellus rhoncus neque, in semper tortor massa non ante. Suspendisse non justo augue. In ut risus facilisis, sagittis mauris ac, facilisis massa. Donec porta eu orci sed faucibus. Vestibulum cursus massa a elit rutrum malesuada a eu nibh. Fusce semper, ipsum vitae faucibus finibus, nunc lacus fermentum lectus, a semper velit ligula in risus. Duis tristique, ligula volutpat imperdiet porttitor, mauris orci rhoncus ante, in convallis ipsum enim nec justo. Nulla aliquam erat in tellus porta lobortis. Integer id nisl id risus lacinia finibus. </p>
+
+        <img
+                src="https://i.ibb.co/GvpcK5S/istockphoto-1312143573-170667a.jpg"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1511886929837-354d827aae26?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHNvY2NlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Mountains in the Clouds"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1624280157150-4d1ed8632989?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Boat on Calm Water"
+        />
+    </div>
+
+    <div style="margin-top: 50px " class="col-lg-4 mb-4 mb-lg-0">
+        <img
+                src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNvY2NlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Waves at Sea"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Yosemite National Park"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1606925797300-0b35e9d1794e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNvY2NlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Waves at Sea"
+        />
+        <img
+                src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                class="w-100 shadow-1-strong rounded mb-4"
+                alt="Yosemite National Park"
+        />
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+    <!-- Section: Social media -->
+    <section
+            class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+    >
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Company name
+                    </h6>
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum
+                        dolor sit amet, consectetur adipisicing elit.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>About Us
+                    </h6>
+                    <p>
+                        Rebeka and Antonio
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Facebook</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Instagram</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">LinkedIn</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Useful links
+                    </h6>
+                    <p>
+                        <a href="#!" class="text-reset">Pricing</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Settings</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Orders</a>
+                    </p>
+                    <p>
+                        <a href="#!" class="text-reset">Help</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Contact
+                    </h6>
+                    <p><i class="fas fa-home me-3"></i> Brasov, UnitBV, Corpul V</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        info@example.com
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                    <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">IBMPractica2022</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
 
 </body>
 
