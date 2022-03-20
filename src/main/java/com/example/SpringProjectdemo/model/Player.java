@@ -1,15 +1,39 @@
 package com.example.SpringProjectdemo.model;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "t_player")
+
+
 public class Player {
+
+    @Id
+    @GeneratedValue
+
     private int id_player;
+
+    @Column(name = "firstName")
     private String firstName;
+    @Column(name = "lastName")
     private String lastName;
+    @Column(name = "age")
     private int age;
+    @Column(name = "salary")
     private int salary;
+    @Column(name = "goals")
     private int goals;
+    @Column(name = "position")
     private String position;
+    @Column(name = "place_of_birth")
     private String place_of_birth;
+    @Column(name = "club")
     private String club;
+
+    public Player(){
+
+    }
 
     public Player(int id_player, String firstName, String lastName, int age, int salary, int goals, String position, String place_of_birth, String club) {
         this.id_player = id_player;
