@@ -1,36 +1,46 @@
 package com.example.SpringProjectdemo.model;
 
 public class Club {
-    private String name;
-    private String short_name;
+    private int id_club;
+    private String club_name;
+    private String full_name;
     private String location;
     private String owner;
     private String chairman;
     private String coach;
 
-    public Club(String name, String short_name, String location, String owner, String chairman, String coach) {
-        this.name = name;
-        this.short_name = short_name;
+    public Club(int id_club, String club_name, String full_name, String location, String owner, String chairman, String coach) {
+        this.id_club = id_club;
+        this.club_name = club_name;
+        this.full_name = full_name;
         this.location = location;
         this.owner = owner;
         this.chairman = chairman;
         this.coach = coach;
     }
 
-    public String getName() {
-        return name;
+    public int getId_club() {
+        return id_club;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId_club(int id_club) {
+        this.id_club = id_club;
     }
 
-    public String getShort_name() {
-        return short_name;
+    public String getClub_name() {
+        return club_name;
     }
 
-    public void setShort_name(String short_name) {
-        this.short_name = short_name;
+    public void setClub_name(String name) {
+        this.club_name = club_name;
+    }
+
+    public String getFull_name() {
+        return full_name;
+    }
+
+    public void setFull_name(String full_name) {
+        this.full_name = full_name;
     }
 
     public String getLocation() {

@@ -35,17 +35,8 @@ public class IndexPlayerController {
 
     @PostMapping(value = "/indexPlayer")
     public String submitPlayer(@ModelAttribute Player player){
-        System.out.println(player.getFirstName());
-        System.out.println(player.getLastName());
-        System.out.println(player.getAge());
-        System.out.println(player.getSalary());
-        System.out.println(player.getGoals());
-        System.out.println(player.getPosition());
-        System.out.println(player.getPlace_of_birth());
-        System.out.println(player.getClub());
         service.savePlayer(player);
         return "redirect:/indexPlayer";
-
     }
 
 }

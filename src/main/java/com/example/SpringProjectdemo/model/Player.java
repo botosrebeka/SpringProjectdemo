@@ -28,8 +28,8 @@ public class Player {
     private String position;
     @Column(name = "place_of_birth")
     private String place_of_birth;
-    @Column(name = "club")
-    private String club;
+    @Column(name = "club_name")
+    private String club_name;
 
     public Player(){
 
@@ -44,7 +44,7 @@ public class Player {
         this.goals = goals;
         this.position = position;
         this.place_of_birth = place_of_birth;
-        this.club = club;
+        this.club_name = club;
     }
 
     public int getId_player() {
@@ -63,12 +63,12 @@ public class Player {
         this.goals = goals;
     }
 
-    public String getClub() {
-        return club;
+    public String getClub_name() {
+        return club_name;
     }
 
-    public void setClub(String club) {
-        this.club = club;
+    public void setClub_name(String club) {
+        this.club_name = club;
     }
 
     public int getSalary() {
