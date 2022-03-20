@@ -1,0 +1,2 @@
+insert into t_player(firstName, lastName, age, salary, goals, position, place_of_birth, club) values ('Nagy','Bela',25,300,50,'Middle','Brasov','OSK')
+insert into t_player(firstName, lastName, age, salary, goals, position, place_of_birth, club) values ('Nagy','Bela',25,300,50,'Middle','Brasov','OSK')
