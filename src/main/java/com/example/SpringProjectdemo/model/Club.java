@@ -9,6 +9,8 @@ public class Club {
     private String chairman;
     private String coach;
 
+    public Club(){}
+
     public Club(int id_club, String club_name, String full_name, String location, String owner, String chairman, String coach) {
         this.id_club = id_club;
         this.club_name = club_name;

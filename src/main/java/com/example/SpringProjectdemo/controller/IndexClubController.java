@@ -1,32 +1,51 @@
 package com.example.SpringProjectdemo.controller;
 
 import com.example.SpringProjectdemo.model.Club;
+import com.example.SpringProjectdemo.model.Player;
+import com.example.SpringProjectdemo.service.ClubService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
 @Controller
 public class IndexClubController {
 
-    @GetMapping(value = "/indexClub")
-    public String getIndex(Model model){
-        List<Club> clubList = List.of(
-                new Club(1,"Asociația Club Sportiv Sepsi OSK Sfântu Gheorghe","OSK","Sfântu Gheorghe","László Diószegi","Attila Hadnagy","Cristiano Bergodi"),
-                new Club(2,"Fotbal Club Dinamo București","Dinamo","București","Dorin Șerdean","Constantin Eftimescu","Dušan Uhrin Jr."),
-                new Club(3,"Clubul Sportiv al Armatei Steaua București","Steaua","București","Ministry of National Defence","Ștefan Răzvan Bichir","?"),
-                new Club(4,"SC Fotbal Club CFR 1907 Cluj SA","CFR","Cluj","Ioan Varga","Cristian Balaj","Dan Petrescu")
-        );
+    @Autowired
+    ClubService service;
 
-        model.addAttribute("clubList",clubList);
+    @GetMapping(value = "/indexClub")
+
+    public String getIndex(Model model){
+
+      //  ClubService service = new ClubService();
+
+        model.addAttribute("clubList", service.getClubList());
 
         return "indexClub";
     }
 
     @GetMapping(value = "/indexAddClub")
-    public String getIndex(){
-        return "indexAddClub";
+    public String createClub(Model model){
+        Club club = new Club();
+        model.addAttribute("club", club);
+        return "/indexAddClub";
+    }
+
+    @PostMapping(value = "/indexClub")
+    public String submitClub(@ModelAttribute Club club){
+        System.out.println(club.getClub_name());
+        System.out.println(club.getFull_name());
+        System.out.println(club.getLocation());
+        System.out.println(club.getOwner());
+        System.out.println(club.getChairman());
+        System.out.println(club.getCoach());
+        service.saveClub(club);
+        return "redirect:/indexClub";
     }
 
 

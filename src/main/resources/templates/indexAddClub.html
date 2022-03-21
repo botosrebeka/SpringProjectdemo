@@ -34,34 +34,36 @@
     </div>
 </nav>
 
-<form style="margin: 25px 50px 5px;">
+<form style="margin: 25px 50px 5px;" th:action="@{/indexClub}" th:object="${club}" method="post">
+
     <div style="margin: 5px 5px 5px;" class="form-group">
-        <label >Full name</label>
-        <input class="form-control"  >
+        <label >Club name</label>
+        <input th:field="${club.club_name}" class="form-control">
     </div>
 
     <div style="margin: 5px 5px 5px;" class="form-group">
-        <label >Short name</label>
-        <input class="form-control">
+        <label >Full name</label>
+        <input th:field="${club.full_name}" class="form-control">
     </div>
 
     <div style="margin: 5px 5px 5px;" class="form-group">
         <label >Location</label>
-        <input class="form-control">
+        <input th:field="${club.location}" class="form-control">
     </div>
     <div style="margin: 5px 5px 5px;" class="form-group">
         <label >Owner</label>
-        <input class="form-control" >
+        <input th:field="${club.owner}" class="form-control" >
     </div>
     <div style="margin: 5px 5px 5px;" class="form-group">
         <label >Chairman</label>
-        <input class="form-control" >
+        <input th:field="${club.chairman}" class="form-control" >
     </div>
     <div style="margin: 5px 5px 5px;" class="form-group">
         <label >Coach</label>
-        <input class="form-control" >
+        <input th:field="${club.coach}" class="form-control" >
     </div>
     <button style="margin: 5px 55px 75px;" type="submit" class="btn btn-primary">Add</button>
+
 </form>
 
 <!-- Footer -->
