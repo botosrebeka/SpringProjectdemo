@@ -11,7 +11,7 @@ create table t_club
 );
 create table t_player
 (
-    id integer auto_increment, primary key(id),
+    id integer auto_increment,
     firstName varchar(50),
     lastName varchar(50),
     age integer,
@@ -19,8 +19,6 @@ create table t_player
     goals integer,
     position varchar(50),
     place_of_birth varchar(100),
-    club_name varchar(50)
+    club_name varchar(50),
+    primary key(id)
 );
- Alter table t_player
-    add foreign key (club_name)
-     references t_club(club_name)

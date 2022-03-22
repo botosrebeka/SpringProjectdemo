@@ -36,23 +36,34 @@
 <table class="table table-hover">
     <thead>
     <tr>
+        <th scope="col">Club ID</th>
         <th scope="col">Name</th>
         <th scope="col">Short name</th>
         <th scope="col">Location</th>
         <th scope="col">Owner</th>
         <th scope="col">Chairman</th>
         <th scope="col">Coach</th>
+        <th scope="col">Valamik</th>
     </tr>
     </thead>
     <tbody>
     <tbody>
     <tr th:each="club : ${clubList}">
+        <td th:text="${club.id_club}" ></td>
         <td th:text="${club.club_name}" ></td>
         <td th:text="${club.full_name}" ></td>
         <td th:text="${club.location}" ></td>
         <td th:text="${club.owner}" ></td>
         <td th:text="${club.chairman}" ></td>
         <td th:text="${club.coach}" ></td>
+        <td>
+            <button type="button" class="btn btn-primary" href="/indexAddPlayer">
+            <a  style = "color : white; text-decoration: none;" href="#">Remove</a>
+             </button>
+            <button type="button" class="btn btn-primary" href="/indexAddPlayer">
+                <a  style = "color : white; text-decoration: none;" href="#">Edit</a>
+            </button>
+        </td>
     </tr>
     </tbody>
 </table>

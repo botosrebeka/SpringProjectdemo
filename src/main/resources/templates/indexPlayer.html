@@ -8,7 +8,6 @@
     <title>Players</title>
     <style>
         body {background: rgba(0, 128, 0, 0.1)}
-
     </style>
 </head>
 <body>
@@ -50,6 +49,7 @@
         <th scope="col">Position</th>
         <th scope="col">Place of birth</th>
         <th scope="col">Club</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -64,6 +64,14 @@
         <td th:text="${player.position}" ></td>
         <td th:text="${player.place_of_birth}" ></td>
         <td th:text="${player.club_name}" ></td>
+        <td>
+            <button type="button" class="btn btn-primary btn-sm">
+                <a  style = "color : white; text-decoration: none;" href="#">Remove</a>
+            </button>
+            <button type="button" class="btn btn-primary btn-sm">
+                <a  style = "color : white; text-decoration: none;" href="#">Edit</a>
+            </button>
+        </td>
     </tr>
     </tbody>
 </table>
@@ -73,11 +81,8 @@
     <button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
         <a  style = "color : white; text-decoration: none;" href="/indexAddPlayer">Add Player</a>
     </button>
-    <button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-        <a  style = "color : white; text-decoration: none;" href="#">Remove Player</a>
-    </button>
-</div>
 
+</div>
 
 </body>
 

@@ -5,13 +5,10 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "t_player")
-
-
 public class Player {
 
     @Id
-    @GeneratedValue
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_player;
 
     @Column(name = "firstName")
