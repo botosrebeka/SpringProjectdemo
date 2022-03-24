@@ -49,7 +49,8 @@
         <th scope="col">Position</th>
         <th scope="col">Place of birth</th>
         <th scope="col">Club</th>
-        <th scope="col">Delete/Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
     </tr>
     </thead>
     <tbody>
@@ -65,10 +66,15 @@
         <td th:text="${player.place_of_birth}" ></td>
         <td th:text="${player.club_name}" ></td>
         <td>
-
             <form th:action="@{/deletePlayer}" th:object="${player}" method="post">
                 <input class="d-none" name="id_player" th:value="${player.id_player}">
                 <button class="btn btn-danger">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/editPlayer}" th:object="${player}" method="post">
+                <input class="d-none" name="id_player" th:value="${player.id_player}">
+                <button class="btn btn-primary">Edit</button>
             </form>
         </td>
     </tr>

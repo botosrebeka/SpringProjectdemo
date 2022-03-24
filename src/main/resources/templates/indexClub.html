@@ -44,6 +44,7 @@
         <th scope="col">Chairman</th>
         <th scope="col">Coach</th>
         <th scope="col">Valamik</th>
+        <th></th>
     </tr>
     </thead>
     <tbody>
@@ -60,6 +61,12 @@
             <form th:action="@{/deleteClub}" th:object="${club}" method="post">
                 <input class="d-none" name="id_club" th:value="${club.id_club}">
                 <button class="btn btn-danger">Delete</button>
+            </form>
+        </td>
+        <td>
+            <form th:action="@{/editClub}" th:object="${club}" method="post">
+                <input class="d-none" name="id_club" th:value="${club.id_club}">
+                <button class="btn btn-primary">Edit</button>
             </form>
         </td>
     </tr>

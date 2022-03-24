@@ -40,6 +40,11 @@ public class IndexPlayerController {
         service.savePlayer(player);
         return "redirect:/indexPlayer";
     }
-
+    @PostMapping(value="/editPlayer")
+    public String editPlayer(@RequestParam("id_player") int id_player, Model model){
+        Player player = service.findPlayerById(id_player);
+        model.addAttribute("player", player);
+        return "indexAddPlayer";
+    }
 
 }

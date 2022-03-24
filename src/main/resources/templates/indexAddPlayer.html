@@ -37,13 +37,18 @@
 
 <form style="margin: 25px 50px 5px;" th:action="@{/indexPlayer}" th:object="${player}" method="post">
     <div style="margin: 5px 5px 5px;" class="form-group">
+        <label>ID</label>
+        <input th:field="${player.id_player}" id="disabledTextInput" class="form-control">
+    </div>
+
+    <div style="margin: 5px 5px 5px;" class="form-group">
         <label >First name</label>
-        <input th:field="${player.firstName}" class="form-control"  value="Mark" >
+        <input th:field="${player.firstName}" class="form-control">
     </div>
 
     <div style="margin: 5px 5px 5px;" class="form-group">
         <label >Last name</label>
-        <input th:field="${player.lastName}" class="form-control" value="Otto" >
+        <input th:field="${player.lastName}" class="form-control" >
     </div>
 
     <div style="margin: 5px 5px 5px;" class="form-group">

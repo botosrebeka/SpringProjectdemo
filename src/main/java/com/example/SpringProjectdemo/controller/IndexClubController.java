@@ -49,5 +49,10 @@ public class IndexClubController {
         return "redirect:/indexClub";
     }
 
-
+    @PostMapping(value="/editClub")
+    public String editClub(@RequestParam("id_club") int id_club, Model model){
+        Club club = service.findClubById(id_club);
+        model.addAttribute("club", club);
+        return "indexAddClub";
+    }
 }

@@ -27,6 +27,9 @@ public class ClubService {
         clubRepository.delete(club);
     }
 
+    public Club findClubById(int id_club){
+        return clubRepository.findById(id_club).get();
+    }
 
 
 }
