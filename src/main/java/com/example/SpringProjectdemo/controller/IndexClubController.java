@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -38,13 +39,13 @@ public class IndexClubController {
 
     @PostMapping(value = "/indexClub")
     public String submitClub(@ModelAttribute Club club){
-        System.out.println(club.getClub_name());
-        System.out.println(club.getFull_name());
-        System.out.println(club.getLocation());
-        System.out.println(club.getOwner());
-        System.out.println(club.getChairman());
-        System.out.println(club.getCoach());
         service.saveClub(club);
+        return "redirect:/indexClub";
+    }
+
+    @PostMapping(value="/deleteClub")
+    public String deleteClub(@RequestParam("id_club") Club id_club){
+        service.deleteClub(id_club);
         return "redirect:/indexClub";
     }
 

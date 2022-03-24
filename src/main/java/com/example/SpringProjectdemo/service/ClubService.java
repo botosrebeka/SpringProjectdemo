@@ -15,7 +15,6 @@ public class ClubService {
     @Autowired
     ClubRepository clubRepository;
 
-
     public List<Club> getClubList(){
         return clubRepository.findAll();
     }
@@ -23,6 +22,11 @@ public class ClubService {
     public void saveClub(Club club){
         clubRepository.save(club);
     }
+
+    public void deleteClub(Club club) {
+        clubRepository.delete(club);
+    }
+
 
 
 }

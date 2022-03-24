@@ -57,12 +57,10 @@
         <td th:text="${club.chairman}" ></td>
         <td th:text="${club.coach}" ></td>
         <td>
-            <button type="button" class="btn btn-primary" href="/indexAddPlayer">
-            <a  style = "color : white; text-decoration: none;" href="#">Remove</a>
-             </button>
-            <button type="button" class="btn btn-primary" href="/indexAddPlayer">
-                <a  style = "color : white; text-decoration: none;" href="#">Edit</a>
-            </button>
+            <form th:action="@{/deleteClub}" th:object="${club}" method="post">
+                <input class="d-none" name="id_club" th:value="${club.id_club}">
+                <button class="btn btn-danger">Delete</button>
+            </form>
         </td>
     </tr>
     </tbody>
@@ -72,9 +70,6 @@
 <div style="margin-bottom: 50px">
 <button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
     <a  style = "color : white; text-decoration: none;" href="/indexAddClub">Add Club</a>
-</button>
-<button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-    <a  style = "color : white; text-decoration: none;" href="#">Remove Club</a>
 </button>
 </div>
 
