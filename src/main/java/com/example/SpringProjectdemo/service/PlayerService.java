@@ -25,4 +25,8 @@ public class PlayerService {
     public void deletePlayer(Player player) {
         playerRepository.delete(player);
     }
+
+    public void deletePlayer(int id_player) {
+        playerRepository.deleteById(id_player);
+    }
 }

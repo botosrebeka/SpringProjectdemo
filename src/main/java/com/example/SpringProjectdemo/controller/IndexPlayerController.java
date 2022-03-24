@@ -1,6 +1,4 @@
 package com.example.SpringProjectdemo.controller;
-
-import ch.qos.logback.core.net.SyslogOutputStream;
 import com.example.SpringProjectdemo.model.Player;
 import com.example.SpringProjectdemo.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class IndexPlayerController {
@@ -31,6 +28,11 @@ public class IndexPlayerController {
         Player player = new Player();
         model.addAttribute("player", player);
         return "indexAddPlayer";
+    }
+    @PostMapping(value="/deletePlayer")
+    public String deletePlayer(@RequestParam("id_player") Player id_player){
+        service.deletePlayer(id_player);
+        return "redirect:/indexPlayer";
     }
 
     @PostMapping(value = "/indexPlayer")

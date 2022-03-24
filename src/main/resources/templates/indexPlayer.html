@@ -65,12 +65,11 @@
         <td th:text="${player.place_of_birth}" ></td>
         <td th:text="${player.club_name}" ></td>
         <td>
-            <button type="button" class="btn btn-primary btn-sm">
-                <a  style = "color : white; text-decoration: none;" href="#">Remove</a>
-            </button>
-            <button type="button" class="btn btn-primary btn-sm">
-                <a  style = "color : white; text-decoration: none;" href="#">Edit</a>
-            </button>
+
+            <form th:action="@{/deletePlayer}" th:object="${player}" method="post">
+                <input class="d-none" name="id_player" th:value="${player.id_player}">
+                <button class="btn btn-danger">Delete</button>
+            </form>
         </td>
     </tr>
     </tbody>
