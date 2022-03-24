@@ -1,4 +1,4 @@
-package com.example.SpringProjectdemo.model;
+package com.example.SpringProjectdemo.entity;
 
 import javax.persistence.*;
 

@@ -1,7 +1,6 @@
 package com.example.SpringProjectdemo.controller;
 
-import com.example.SpringProjectdemo.model.Club;
-import com.example.SpringProjectdemo.model.Player;
+import com.example.SpringProjectdemo.entity.Club;
 import com.example.SpringProjectdemo.service.ClubService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.List;
 
 @Controller
 public class IndexClubController {

@@ -1,12 +1,19 @@
-package com.example.SpringProjectdemo.model;
+package com.example.SpringProjectdemo.entity;
 
-import javax.persistence.Column;
 
-public class playerDto {
+import javax.persistence.*;
+
+@Entity
+@Table(name = "t_player")
+public class Player {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_player;
-    @Column(name = "firstName")
+
+    @Column(name = "firstname")
     private String firstName;
-    @Column(name = "lastName")
+    @Column(name = "lastname")
     private String lastName;
     @Column(name = "age")
     private int age;
@@ -20,6 +27,22 @@ public class playerDto {
     private String place_of_birth;
     @Column(name = "club_name")
     private String club_name;
+
+    public Player(){
+
+    }
+
+    public Player(int id_player, String firstName, String lastName, int age, int salary, int goals, String position, String place_of_birth, String club) {
+        this.id_player = id_player;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.salary = salary;
+        this.goals = goals;
+        this.position = position;
+        this.place_of_birth = place_of_birth;
+        this.club_name = club;
+    }
 
     public int getId_player() {
         return id_player;
@@ -89,5 +112,7 @@ public class playerDto {
         return lastName;
     }
 
-    public void setLastName(String lastName) {this.lastName = lastName;}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
