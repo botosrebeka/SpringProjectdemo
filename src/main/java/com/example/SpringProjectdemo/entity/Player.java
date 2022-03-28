@@ -4,6 +4,7 @@ package com.example.SpringProjectdemo.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -32,6 +33,6 @@ public class Player {
     private String position;
     @Column(name = "place_of_birth")
     private String place_of_birth;
-    @Column(name = "club_name")
-    private String club_name;
+    @Column(name = "id_club")
+    private int id_club;
 }

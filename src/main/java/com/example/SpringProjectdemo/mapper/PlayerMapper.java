@@ -16,7 +16,7 @@ public class PlayerMapper {
                 .goals(player.getGoals())
                 .position(player.getPosition())
                 .place_of_birth(player.getPlace_of_birth())
-                .club_name(player.getClub_name())
+                .id_club(player.getId_club())
                 .build();
     }
 
@@ -30,7 +30,7 @@ public class PlayerMapper {
                 .goals(playerDto.getGoals())
                 .position(playerDto.getPosition())
                 .place_of_birth(playerDto.getPlace_of_birth())
-                .club_name(playerDto.getClub_name())
+                .id_club(playerDto.getId_club())
                 .build();
     }
 }

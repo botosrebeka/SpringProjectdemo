@@ -64,7 +64,7 @@
         <td th:text="${player.getGoals()}" ></td>
         <td th:text="${player.position}" ></td>
         <td th:text="${player.place_of_birth}" ></td>
-        <td th:text="${player.club_name}" ></td>
+        <td th:text="${player.id_club}" ></td>
         <td>
             <form th:action="@{/deletePlayer}" th:object="${player}" method="post">
                 <input class="d-none" name="id_player" th:value="${player.id_player}">

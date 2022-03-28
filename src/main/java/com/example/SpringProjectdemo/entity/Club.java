@@ -3,6 +3,8 @@ package com.example.SpringProjectdemo.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -28,5 +30,4 @@ public class Club {
     private String chairman;
     @Column(name = "coach")
     private String coach;
-
 }

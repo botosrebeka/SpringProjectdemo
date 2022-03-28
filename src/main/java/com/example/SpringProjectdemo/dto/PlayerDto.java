@@ -16,5 +16,5 @@ public class PlayerDto {
     private int goals;
     private String position;
     private String place_of_birth;
-    private String club_name;
+    private int id_club;
 }
