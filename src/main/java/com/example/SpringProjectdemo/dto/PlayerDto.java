@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class PlayerDto {
-    private int id_player;
+    private int id;
     private String firstName;
     private String lastName;
     private int age;
@@ -16,5 +16,6 @@ public class PlayerDto {
     private int goals;
     private String position;
     private String place_of_birth;
-    private int id_club;
+    private String club_name;
+
 }

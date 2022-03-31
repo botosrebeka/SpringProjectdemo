@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class PlayerMapper {
     public PlayerDto mapPlayerDto(Player player) {
         return PlayerDto.builder()
-                .id_player(player.getId_player())
+                .id(player.getId())
                 .firstName(player.getFirstName())
                 .lastName(player.getLastName())
                 .age(player.getAge())
@@ -16,13 +16,13 @@ public class PlayerMapper {
                 .goals(player.getGoals())
                 .position(player.getPosition())
                 .place_of_birth(player.getPlace_of_birth())
-                .id_club(player.getId_club())
+                .club_name(player.getClub().getClub_name())
                 .build();
     }
 
     public Player mapPlayer(PlayerDto playerDto) {
         return Player.builder()
-                .id_player(playerDto.getId_player())
+                .id(playerDto.getId())
                 .firstName(playerDto.getFirstName())
                 .lastName(playerDto.getLastName())
                 .age(playerDto.getAge())
@@ -30,7 +30,7 @@ public class PlayerMapper {
                 .goals(playerDto.getGoals())
                 .position(playerDto.getPosition())
                 .place_of_birth(playerDto.getPlace_of_birth())
-                .id_club(playerDto.getId_club())
+               // .id_club(playerDto.getId_club())
                 .build();
     }
 }

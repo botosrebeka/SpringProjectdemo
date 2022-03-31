@@ -50,7 +50,7 @@
     <tbody>
     <tbody>
     <tr th:each="club : ${clubList}">
-        <td th:text="${club.id_club}" ></td>
+        <td th:text="${club.id}" ></td>
         <td th:text="${club.club_name}" ></td>
         <td th:text="${club.full_name}" ></td>
         <td th:text="${club.location}" ></td>
@@ -59,13 +59,13 @@
         <td th:text="${club.coach}" ></td>
         <td>
             <form th:action="@{/deleteClub}" th:object="${club}" method="post">
-                <input class="d-none" name="id_club" th:value="${club.id_club}">
+                <input class="d-none" name="id" th:value="${club.id}">
                 <button class="btn btn-danger">Delete</button>
             </form>
         </td>
         <td>
             <form th:action="@{/editClub}" th:object="${club}" method="post">
-                <input class="d-none" name="id_club" th:value="${club.id_club}">
+                <input class="d-none" name="id" th:value="${club.id}">
                 <button class="btn btn-primary">Edit</button>
             </form>
         </td>

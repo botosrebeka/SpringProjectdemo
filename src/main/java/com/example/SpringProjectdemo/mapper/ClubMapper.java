@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class ClubMapper {
     public ClubDto mapClubDto(Club club) {
         return ClubDto.builder()
-                .id_club(club.getId_club())
+                .id(club.getId())
                 .club_name(club.getClub_name())
                 .full_name(club.getFull_name())
                 .location(club.getLocation())
@@ -20,7 +20,7 @@ public class ClubMapper {
 
     public Club mapClub(ClubDto clubDto) {
         return Club.builder()
-                .id_club(clubDto.getId_club())
+                .id(clubDto.getId())
                 .club_name(clubDto.getClub_name())
                 .full_name(clubDto.getFull_name())
                 .location(clubDto.getLocation())

@@ -37,8 +37,8 @@ public class PlayerService {
         playerRepository.delete(player);
     }
 
-    public PlayerDto findPlayerById(int id_player){
-        Player player = playerRepository.findById(id_player).get();
+    public PlayerDto findPlayerById(int id){
+        Player player = playerRepository.findById(id).get();
         return mapper.mapPlayerDto(player);
     }
 

@@ -1,13 +1,14 @@
 create table t_club
 (
-    id_club integer auto_increment,
+    id integer auto_increment,
     club_name varchar(100),
     full_name varchar(10),
     location varchar(100),
     owner varchar(100),
     chairman varchar(100),
     coach varchar(100),
-    primary key(id_club)
+    primary key(id)
+
 );
 create table t_player
 (
@@ -21,8 +22,7 @@ create table t_player
     place_of_birth varchar(100),
     id_club integer,
     primary key(id),
-    foreign key (id_club) references t_club(id_club)
-
+    foreign key (id_club) references t_club(id)
 );
 
 

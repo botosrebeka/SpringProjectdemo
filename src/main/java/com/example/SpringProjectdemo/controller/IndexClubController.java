@@ -43,14 +43,14 @@ public class IndexClubController {
     }
 
     @PostMapping(value="/deleteClub")
-    public String deleteClub(@RequestParam("id_club") Club id_club){
-        service.deleteClub(id_club);
+    public String deleteClub(@RequestParam("id") Club id){
+        service.deleteClub(id);
         return "redirect:/indexClub";
     }
 
     @PostMapping(value="/editClub")
-    public String editClub(@RequestParam("id_club") int id_club, Model model){
-        ClubDto clubDto = service.findClubById(id_club);
+    public String editClub(@RequestParam("id") int id, Model model){
+        ClubDto clubDto = service.findClubById(id);
         model.addAttribute("club", clubDto);
         return "indexAddClub";
     }

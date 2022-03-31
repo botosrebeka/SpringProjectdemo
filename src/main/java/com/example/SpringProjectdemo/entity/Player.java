@@ -17,7 +17,7 @@ public class Player {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_player;
+    private int id;
 
     @Column(name = "firstname")
     private String firstName;
@@ -33,6 +33,8 @@ public class Player {
     private String position;
     @Column(name = "place_of_birth")
     private String place_of_birth;
-    @Column(name = "id_club")
-    private int id_club;
+
+    @ManyToOne
+    @JoinColumn(name = "id_club")
+    private Club club;
 }

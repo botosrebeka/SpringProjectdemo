@@ -56,7 +56,7 @@
     <tbody>
     <tbody>
     <tr th:each="player : ${playerList}">
-        <td th:text="${player.getId_player()}" ></td>
+        <td th:text="${player.getId()}" ></td>
         <td th:text="${player.firstName}" ></td>
         <td th:text="${player.lastName}" ></td>
         <td th:text="${player.getAge()}" ></td>
@@ -64,16 +64,16 @@
         <td th:text="${player.getGoals()}" ></td>
         <td th:text="${player.position}" ></td>
         <td th:text="${player.place_of_birth}" ></td>
-        <td th:text="${player.id_club}" ></td>
+        <td th:text="${player.club_name}" ></td>
         <td>
             <form th:action="@{/deletePlayer}" th:object="${player}" method="post">
-                <input class="d-none" name="id_player" th:value="${player.id_player}">
+                <input class="d-none" name="id" th:value="${player.id}">
                 <button class="btn btn-danger">Delete</button>
             </form>
         </td>
         <td>
             <form th:action="@{/editPlayer}" th:object="${player}" method="post">
-                <input class="d-none" name="id_player" th:value="${player.id_player}">
+                <input class="d-none" name="id" th:value="${player.id}">
                 <button class="btn btn-primary">Edit</button>
             </form>
         </td>

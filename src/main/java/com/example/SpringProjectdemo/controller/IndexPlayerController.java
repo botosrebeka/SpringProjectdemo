@@ -35,8 +35,8 @@ public class IndexPlayerController {
     }
 
     @PostMapping(value="/deletePlayer")
-    public String deletePlayer(@RequestParam("id_player") Player id_player){
-        service.deletePlayer(id_player);
+    public String deletePlayer(@RequestParam("id") Player id){
+        service.deletePlayer(id);
         return "redirect:/indexPlayer";
     }
 
@@ -46,8 +46,8 @@ public class IndexPlayerController {
         return "redirect:/indexPlayer";
     }
     @PostMapping(value="/editPlayer")
-    public String editPlayer(@RequestParam("id_player") int id_player, Model model){
-        PlayerDto playerDto = service.findPlayerById(id_player);
+    public String editPlayer(@RequestParam("id") int id, Model model){
+        PlayerDto playerDto = service.findPlayerById(id);
         model.addAttribute("player", playerDto);
         return "indexAddPlayer";
     }

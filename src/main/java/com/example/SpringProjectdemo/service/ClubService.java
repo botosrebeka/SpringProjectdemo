@@ -36,8 +36,8 @@ public class ClubService {
         clubRepository.delete(club);
     }
 
-    public ClubDto findClubById(int id_club){
-        Club club = clubRepository.findById(id_club).get();
+    public ClubDto findClubById(int id){
+        Club club = clubRepository.findById(id).get();
         return mapper.mapClubDto(club);
     }
 

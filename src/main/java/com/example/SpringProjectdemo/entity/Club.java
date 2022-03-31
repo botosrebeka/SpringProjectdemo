@@ -16,7 +16,7 @@ public class Club {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_club;
+    private int id;
 
     @Column(name = "club_name")
     private String club_name;
@@ -30,4 +30,8 @@ public class Club {
     private String chairman;
     @Column(name = "coach")
     private String coach;
+
+    @OneToMany(mappedBy="club",fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    List<Player> playerList;
+
 }
