@@ -4,13 +4,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
-    <title>Club</title>
+    <title>LogIn</title>
     <style>
         body {background: rgba(0, 128, 0, 0.1)}
     </style>
 </head>
-<body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Football</a>
@@ -35,55 +33,33 @@
         </div>
     </div>
 </nav>
-<div style="margin: 25px 50px 75px 50px">
-<table class="table table-hover">
-    <thead>
-    <tr>
-        <th scope="col">Club ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Short name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Owner</th>
-        <th scope="col">Chairman</th>
-        <th scope="col">Coach</th>
-        <th scope="col">Delete</th>
-        <th scope="col">Edit</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tbody>
-    <tr th:each="club : ${clubList}">
-        <td th:text="${club.id}" ></td>
-        <td th:text="${club.club_name}" ></td>
-        <td th:text="${club.full_name}" ></td>
-        <td th:text="${club.location}" ></td>
-        <td th:text="${club.owner}" ></td>
-        <td th:text="${club.chairman}" ></td>
-        <td th:text="${club.coach}" ></td>
-        <td>
-            <form th:action="@{/deleteClub}" th:object="${club}" method="post">
-                <input class="d-none" name="id" th:value="${club.id}">
-                <button class="btn btn-danger">Delete</button>
-            </form>
-        </td>
-        <td>
-            <form th:action="@{/editClub}" th:object="${club}" method="post">
-                <input class="d-none" name="id" th:value="${club.id}">
-                <button class="btn btn-primary">Edit</button>
-            </form>
-        </td>
-    </tr>
-    </tbody>
-</table>
-</div>
-<br/>
-<div style="margin-bottom: 50px">
-<button style= "margin-left:30px;" type="button" class="btn btn-primary" href="/indexAddPlayer">
-    <a  style = "color : white; text-decoration: none;" href="/indexAddClub">Add Club</a>
-</button>
-</div>
 
-<!-- Footer -->
+<body>
+<div style="margin: 50px 580px; padding: 25px; border-style:solid black; border-radius: 5px; background: #cee2cd;">
+    <form  method="post">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" id="form2Example1" class="form-control" />
+            <label class="form-label" for="form2Example1">Email address</label>
+        </div>
+
+        <div class="form-outline mb-4">
+            <input type="email" id="form2Example3" class="form-control" />
+            <label class="form-label" for="form2Example3">Username</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" id="form2Example2" class="form-control" />
+            <label class="form-label" for="form2Example2">Password</label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="button" class="btn btn-primary btn-block mb-4">Regist</button>
+    </form>
+</div>
+</body>
+
 <footer class="text-center text-lg-start bg-light text-muted">
     <!-- Section: Social media -->
     <section
@@ -207,8 +183,7 @@
     </div>
     <!-- Copyright -->
 </footer>
-<!-- Footer -->
 
-</body>
+
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 </html>

@@ -17,6 +17,16 @@ public class HelloController {
     public String getIndex(){
         return "/indexHome";
     }
+
+    @GetMapping(value = "/indexLogIn")
+    public String getIndexLogIn(){
+        return "/indexLogIn";
+    }
+
+    @GetMapping(value = "/indexRegister")
+    public String getIndexRegister(){
+        return "/indexRegister";
+    }
 }
 
 
