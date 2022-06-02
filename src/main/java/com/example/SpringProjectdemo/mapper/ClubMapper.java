@@ -10,10 +10,7 @@ public class ClubMapper {
         return ClubDto.builder()
                 .id(club.getId())
                 .club_name(club.getClub_name())
-                .full_name(club.getFull_name())
                 .location(club.getLocation())
-                .owner(club.getOwner())
-                .chairman(club.getChairman())
                 .coach(club.getCoach())
                 .build();
     }
@@ -22,10 +19,7 @@ public class ClubMapper {
         return Club.builder()
                 .id(clubDto.getId())
                 .club_name(clubDto.getClub_name())
-                .full_name(clubDto.getFull_name())
                 .location(clubDto.getLocation())
-                .owner(clubDto.getOwner())
-                .chairman(clubDto.getChairman())
                 .coach(clubDto.getCoach())
                 .build();
     }

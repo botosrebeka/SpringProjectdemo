@@ -29,9 +29,6 @@
                 <li>
                     <a class="nav-link active" href="/indexClub">Clubs</a>
                 </li>
-                <li>
-                    <a style="margin-left: 1100px" class="nav-link active" href="/indexLogIn">LogIn</a>
-                </li>
             </ul>
         </div>
     </div>
@@ -59,7 +56,7 @@
     <tbody>
     <tbody>
     <tr th:each="player : ${playerList}">
-        <td th:text="${player.getId()}" ></td>
+        <td th:text="${player.id}" ></td>
         <td th:text="${player.firstName}" ></td>
         <td th:text="${player.lastName}" ></td>
         <td th:text="${player.getAge()}" ></td>
@@ -70,13 +67,13 @@
         <td th:text="${player.club_name}" ></td>
         <td>
             <form th:action="@{/deletePlayer}" th:object="${player}" method="post">
-                <input class="d-none" name="id" th:value="${player.id}">
+                <input class="d-none" name="id_player" th:value="${player.id}">
                 <button class="btn btn-danger">Delete</button>
             </form>
         </td>
         <td>
             <form th:action="@{/editPlayer}" th:object="${player}" method="post">
-                <input class="d-none" name="id" th:value="${player.id}">
+                <input class="d-none" name="id_player" th:value="${player.id}">
                 <button class="btn btn-primary">Edit</button>
             </form>
         </td>
@@ -155,7 +152,7 @@
                         <i class="fas fa-gem me-3"></i>About Us
                     </h6>
                     <p>
-                        Rebeka and Antonio
+                        Antonio
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Facebook</a>
@@ -214,7 +211,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">IBMPractica2022</a>
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">PWEB</a>
     </div>
     <!-- Copyright -->
 </footer>

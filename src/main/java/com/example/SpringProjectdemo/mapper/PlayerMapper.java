@@ -30,7 +30,6 @@ public class PlayerMapper {
                 .goals(playerDto.getGoals())
                 .position(playerDto.getPosition())
                 .place_of_birth(playerDto.getPlace_of_birth())
-               // .id_club(playerDto.getId_club())
                 .build();
     }
 }

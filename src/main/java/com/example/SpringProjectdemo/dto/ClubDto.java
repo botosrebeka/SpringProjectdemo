@@ -10,9 +10,6 @@ import lombok.*;
 public class ClubDto {
     private int id;
     private String club_name;
-    private String full_name;
     private String location;
-    private String owner;
-    private String chairman;
     private String coach;
 }

@@ -4,7 +4,6 @@ package com.example.SpringProjectdemo.entity;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
@@ -35,6 +34,6 @@ public class Player {
     private String place_of_birth;
 
     @ManyToOne
-    @JoinColumn(name = "id_club")
+    @JoinColumn(name="id_club")
     private Club club;
 }

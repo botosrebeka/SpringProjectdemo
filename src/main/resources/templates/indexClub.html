@@ -41,10 +41,7 @@
     <tr>
         <th scope="col">Club ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Short name</th>
         <th scope="col">Location</th>
-        <th scope="col">Owner</th>
-        <th scope="col">Chairman</th>
         <th scope="col">Coach</th>
         <th scope="col">Delete</th>
         <th scope="col">Edit</th>
@@ -55,10 +52,7 @@
     <tr th:each="club : ${clubList}">
         <td th:text="${club.id}" ></td>
         <td th:text="${club.club_name}" ></td>
-        <td th:text="${club.full_name}" ></td>
         <td th:text="${club.location}" ></td>
-        <td th:text="${club.owner}" ></td>
-        <td th:text="${club.chairman}" ></td>
         <td th:text="${club.coach}" ></td>
         <td>
             <form th:action="@{/deleteClub}" th:object="${club}" method="post">
@@ -144,7 +138,7 @@
                         <i class="fas fa-gem me-3"></i>About Us
                     </h6>
                     <p>
-                        Rebeka and Antonio
+                        Antonio
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Facebook</a>
@@ -203,7 +197,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2022 Copyright:
-        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">IBMPractica2022</a>
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">PWEB</a>
     </div>
     <!-- Copyright -->
 </footer>
